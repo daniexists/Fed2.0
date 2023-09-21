@@ -16,13 +16,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Auteur:
-  Sanne 't Hooft (vervangen door jouw naam)
+  Danisha Kreuning
 
   #### Je startniveau:
-  hier je startniveau (kies uit zwart, rood óf blauw)
+  Blauw
 
   #### Je focus:
-  hier je focus (kies uit responsive óf surface plane)
+  ??
  
 </details>
 
@@ -36,15 +36,15 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Je opdracht:
-  link naar de website die je gaat namaken óf de naam/omschrijving van je eigen ontwerp
+  https://5sos.com/ 
 
   #### Screenshot(s) van de eerste pagina (small screen): 
   hier de naam van de pagina  
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+  <img src="readme-images/5sos-home.PNG" width="375px" alt="De home pagina van de website van 5 seconds of summer, deze website heb ik gekozen omdat ik de band leuk vind en ik denk dat dit voor mij de goede uitdaging bied">
 
   #### Screenshot(s) van de tweede pagina (small screen):
   hier de naam van de pagina  
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+  <img src="readme-images/5sos-tour.PNG" width="375px" alt="Deze pagina leek mij het meest afwijkend naast de merch pagina maar omdat we ook na moesten denken over het sourcen van foto's leek deze pagina mij handiger">
  
 </details>
 
@@ -57,6 +57,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen:
+  De wesbite is eigenlijk totaal niet toegankelijk, er staat nergens een alt tekstje en bij de knoppen staat niet eens aangegven dat het een knop is. Dus het kan eigenlijk alleen maar beter! :) 
+
+  De checklist:
+  - 
 
 </details>
 
@@ -88,18 +92,19 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 1<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  Opzich ging het niet slecht persoonlijk begrijp ik de flexbox eens stuk beter wat het makkelijker maakte voor mij om te beginnen met de html, uiteraard kwam ik ook een aantal stukken tegen die wat minder gingen maar die heb ik gelaten ipv een uur te schelden naar mijn scherm. De meeste elementen op de site weet ik van wat ik er mee wil/moet maar de hoe is op dit moment lastig voor mij. 
 
 
-  ### Agenda voor meeting
+  ### Agenda voor meeting 21-09-2023
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
-
+  | Zineb          | Caynalin           | Danisha      
+  | ---            | ---                | ---          
+  | dit bespreken  | en dit             |   
+  | en dat ook nog | dit als er tijd is | Hoe kan ik het beste mijn font toevoegen?
+  | ...            | ...                | Hoe kan ik een form toevoegen?
+  | ...            | ...                | Hoe kan ik de h1 verbergen?
+  | ...            | ...                | Beste aanpak voor de achtergrond?
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen

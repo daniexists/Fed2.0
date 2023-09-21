@@ -1,31 +1,76 @@
+/* De lettertypes die ik nodig heb toe te voegen */
+@font-face {
+	font-family: '5secondsofsummerbold';
+	src: url(../fonts/urw-antiqua-bold.woff2);
+}
+
+@font-face {
+	font-family: '5secondsofsummermedium';
+	src: url(../fonts/urw-antiqua-medium.woff2);
+}
+
+
+
 /**************/
-/* CSS REMEDY */
+/* CSS REMEDY */ /* geen idee wat dit is dit stond er al in */
 /**************/
 *, *::after, *::before {
   box-sizing:border-box;  
 }
 
 
-
-
-
-
 /*********************/
-/* CUSTOM PROPERTIES */
+/* CUSTOM PROPERTIES */ /* Om het mezelf makkelijker te maken properties voor de kleuren en letterypes gemaakt  */
 /*********************/
 :root {
-	/* startje */
-	--color-text:#111;
-	--color-background:#eee;
+	--color-text:rgb(240, 234, 187);
+	--color-background:rgb(2, 7, 36);
+	--font-family: '5secondsofsummermedium';
 }
-
-
-
 
 
 /****************/
 /* JOUW STYLING */
 /****************/
 
-/* jouw code */
+/* Om de puntjes voor de list items in de navigatie en de footer weg te halen */
+ ul {
+	list-style: none; 
+	/* flexboxen om de ul en li op 1 mooi rijtje te krijgen wat niet de hele pagina in belsag neemt*/
+	display: flex;
+	overflow-x: auto;
+	gap: 1em;
+}
 
+/* om de navigatie tekst atoumatisch het goeie font te geven maar werkt nog niet */ 
+nav ul li {
+	font-family: var(--font-family);
+
+	/* flexboxen om de ul en li op 1 mooi rijtje te krijgen wat niet de hele pagina in belsag neemt*/
+
+	display: flex;
+	flex-direction: column;
+	gap: .25em;
+	flex-shrink: 0; 
+	margin-right: auto; 
+
+}
+
+/* om het logo en de vallende figuren kleiner te krijgen maar werkt nog niet 100% */ 
+main header img:first-of-type {
+
+	height: 10em;
+	width: 10em;
+
+}
+
+main header img :nth-of-type(2) {
+	height: 10em;
+	width: 10em;
+}
+
+/* om alle tekst de goeie kleur te geven */ 
+
+ main body h1 ul h2 h3 {
+	font-style: var(--color-text);
+}
