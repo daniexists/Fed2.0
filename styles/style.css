@@ -15,17 +15,29 @@
 /* CSS REMEDY */ /* geen idee wat dit is dit stond er al in */
 /**************/
 *, *::after, *::before {
-  box-sizing:border-box;  
+  box-sizing:border-box; 
+  
+  /* border:solid 1px red; */
 }
 
 
 /*********************/
-/* CUSTOM PROPERTIES */ /* Om het mezelf makkelijker te maken properties voor de kleuren en letterypes gemaakt  */
+/* CUSTOM PROPERTIES */ /* Om het mezelf makkelijker te maken properties voor de kleuren en letterypes gemaakt */
 /*********************/
 :root {
-	--color-text:rgb(240, 234, 187);
-	--color-background:rgb(2, 7, 36);
-	--font-family: '5secondsofsummermedium';
+	--color-gold:rgb(240, 234, 187);
+	--color-blue:rgb(2, 7, 36);
+	  font-family: '5secondsofsummermedium';
+}
+
+
+body {
+	margin:0;
+}
+
+/* de fotos worden niet groter dan de container*/
+img {
+	max-width: 100%;
 }
 
 
@@ -33,44 +45,90 @@
 /* JOUW STYLING */
 /****************/
 
-/* Om de puntjes voor de list items in de navigatie en de footer weg te halen */
- ul {
+/* Achtergrond kleur */
+main{
+	background-color: var(--color-blue);
+	/* om alle tekst de goeie kleur te geven */ 
+	color: var(--color-gold);
+}
+
+/* Om de puntjes voor de list items in de navigatie en de footer weg te halen */ 
+ul {
 	list-style: none; 
-	/* flexboxen om de ul en li op 1 mooi rijtje te krijgen wat niet de hele pagina in belsag neemt*/
+	/* flexboxen om de ul en li op 1 mooi rijtje te krijgen wat niet de hele pagina in beslag neemt*/
 	display: flex;
 	overflow-x: auto;
 	gap: 1em;
 }
 
-/* om de navigatie tekst atoumatisch het goeie font te geven maar werkt nog niet */ 
-nav ul li {
+/* om de navigatie tekst atoumatisch het goeie font te geven  */ 
+nav ul li a{
 	font-family: var(--font-family);
+	color: var(--color-gold);
 
-	/* flexboxen om de ul en li op 1 mooi rijtje te krijgen wat niet de hele pagina in belsag neemt*/
-
-	display: flex;
-	flex-direction: column;
-	gap: .25em;
-	flex-shrink: 0; 
-	margin-right: auto; 
+}
+ 
+/* Voor het logo (grote en vastzetten) WERKT NIET/GEEN IDEE OF DIT UBERHAUPT GOED IS*/
+  main header h1 img {
+	position: fixed; 
+	width:auto;
+	height:auto; 
 
 }
 
-/* om het logo en de vallende figuren kleiner te krijgen maar werkt nog niet 100% */ 
-main header img:first-of-type {
 
-	height: 10em;
-	width: 10em;
+/* listen 'knop' kleur en vorm geven*/
+body section a {
+	border: 20em;
+	border-radius: 1.5em;
+	background-color: var(--color-gold); 
+	margin: 1em;
+	padding: 0.5em;
+
+	color: rgb(103,101,77);
+}
+
+/* Om de teksten in het midden uitgelijnd te krijgen*/
+body section h2{
+	display:flex;
+	justify-content: center;
 
 }
 
-main header img :nth-of-type(2) {
-	height: 10em;
-	width: 10em;
+footer h2{
+	display:flex;
+	justify-content:center; 
 }
 
-/* om alle tekst de goeie kleur te geven */ 
-
- main body h1 ul h2 h3 {
-	font-style: var(--color-text);
+body section h3{
+	display:flex;
+	justify-content: center;
 }
+
+
+
+
+/* om de achtergrond over de hele pagina te krijgen */
+h1{
+	margin: 0;
+}
+
+/* om de h1 te verbergen */
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+
+.visually-hidden {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+  }
+
+  /* https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label */
+  /* Voor de form  */
+
+
+
+

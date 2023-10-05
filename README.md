@@ -126,17 +126,17 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 2<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  Ben erg ziek geweest waardoor ik niet veel gedaan heb, nu weer begonnen en na wat kleine lastigheden gaat het opzich prima ik moet gewoon meer code schrijven en een beetje een inhaal slag proberen te maken. 
 
 
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  | Zineb          | Caynalin           | Hidde        | Danisha                              |
+  | ---            | ---                | ---          | ---                                  |
+  | dit bespreken  | en dit             | en ik dit    | Beste aanpak voor de achtergrond?    |
+  | en dat ook nog | dit als er tijd is | nog een punt | Ik struggle met de groote van afbeeldingen/elementen hoe maak ik dat logischer?|
+  | ...            | ...                | ...          |                                   |
 
 
   ### Verslag van meeting
