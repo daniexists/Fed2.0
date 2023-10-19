@@ -8,6 +8,8 @@
 	font-family: '5secondsofsummermedium';
 	src: url(../fonts/urw-antiqua-medium.woff2);
 }
+/* De lettertypes die ik nodig heb toe te voegen */
+
 
 
 
@@ -21,18 +23,45 @@
 }
 
 
+
+
+
 /*********************/
 /* CUSTOM PROPERTIES */ /* Om het mezelf makkelijker te maken properties voor de kleuren en letterypes gemaakt */
 /*********************/
 :root {
 	--color-gold:rgb(240, 234, 187);
 	--color-blue:rgb(2, 7, 36);
+	--color-tan:rgb(103,101,77);
 	  font-family: '5secondsofsummermedium';
+}
+
+
+
+
+
+/********************/
+/* overall styling  */
+/********************/
+html{
+	background-image:url(../images/v3-bg.jpg); 
+	background-repeat: repeat-y;
+	background-size:100% auto;
+
+	/* om alle tekst de goeie kleur te geven */ 
+	color: var(--color-gold);
 }
 
 
 body {
 	margin:0;
+	
+}
+
+
+/* om de achtergrond over de hele pagina te krijgen */
+h1{
+	margin: 0;
 }
 
 /* de fotos worden niet groter dan de container*/
@@ -40,77 +69,21 @@ img {
 	max-width: 100%;
 }
 
-
-/****************/
-/* JOUW STYLING */
-/****************/
-
-/* Achtergrond kleur */
-main{
-	background-color: var(--color-blue);
-	/* om alle tekst de goeie kleur te geven */ 
-	color: var(--color-gold);
-}
-
 /* Om de puntjes voor de list items in de navigatie en de footer weg te halen */ 
-ul {
-	list-style: none; 
+main ul {
+	margin:0;
+	padding:0;
+	list-style: none;
+
 	/* flexboxen om de ul en li op 1 mooi rijtje te krijgen wat niet de hele pagina in beslag neemt*/
 	display: flex;
 	overflow-x: auto;
 	gap: 1em;
 }
 
-/* om de navigatie tekst atoumatisch het goeie font te geven  */ 
-nav ul li a{
-	font-family: var(--font-family);
-	color: var(--color-gold);
-
-}
- 
-/* Voor het logo (grote en vastzetten) WERKT NIET/GEEN IDEE OF DIT UBERHAUPT GOED IS*/
-  main header h1 img {
-	position: fixed; 
-	width:auto;
-	height:auto; 
-
-}
-
-
-/* listen 'knop' kleur en vorm geven*/
-body section a {
-	border: 20em;
-	border-radius: 1.5em;
-	background-color: var(--color-gold); 
-	margin: 1em;
-	padding: 0.5em;
-
-	color: rgb(103,101,77);
-}
-
-/* Om de teksten in het midden uitgelijnd te krijgen*/
-body section h2{
-	display:flex;
-	justify-content: center;
-
-}
-
-footer h2{
-	display:flex;
-	justify-content:center; 
-}
-
-body section h3{
-	display:flex;
-	justify-content: center;
-}
-
-
-
-
-/* om de achtergrond over de hele pagina te krijgen */
-h1{
-	margin: 0;
+/* Om het lijntje onder de links we te krijgen */
+a {
+	text-decoration: none;
 }
 
 /* om de h1 te verbergen */
@@ -125,10 +98,271 @@ h1{
 	white-space: nowrap;
 	width: 1px;
   }
+  
 
   /* https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label */
   /* Voor de form  */
 
 
 
+/****************/
+/* JOUW STYLING */
+/****************/
 
+
+/**********/
+/* HEADER */
+/**********/
+
+header{
+	position: relative;
+	height:100vh;
+
+	display:flex; 
+	justify-content: center;
+	align-items: end;
+}
+
+/* header ul en li op 1 rijtje krijgen en zonder lijntjes en punten*/
+header ul {
+	margin:0;
+	padding:0;
+	list-style: none;
+
+	/* flexboxen om de ul en li op 1 mooi rijtje te krijgen wat niet de hele pagina in beslag neemt*/
+	display: flex;
+	gap: 1em;
+}
+
+/* Voor het logo (grote en vastzetten)*/
+header h1 {
+	position: fixed; 
+	top:1em; 
+	width:9.25rem;
+
+	z-index: 100;
+}
+
+header h1 img{
+	display:block;
+}
+
+
+/* poppetjes */
+header div {
+	position: absolute;
+	inset:0;
+	background-image: 
+	linear-gradient(
+		-45deg,
+		GoldenRod ,
+		papayawhip,
+		white,
+		GoldenRod ,
+		papayawhip,
+		white,
+		GoldenRod 
+	);
+	background-size: 200% 200%;
+	background-position: left bottom;
+
+	-webkit-mask-image:url(../images/boys-mobile.svg);
+	-webkit-mask-size: auto 80%;
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-position: center;
+
+	
+}
+
+@media (prefers-reduced-motion:no-preference) {
+	header div {
+		animation-name:mask;
+		animation-duration: 5s;
+		animation-timing-function: linear;
+		animation-iteration-count: infinite;
+	}
+
+	@keyframes mask {
+		0% {
+			background-position: left top;
+		}
+		100% {
+			background-position: right bottom;
+		}
+	}
+} 
+/* poppetjes */
+
+
+
+/* nav */
+header nav {
+	position: relative;
+	padding:1em;
+}
+
+
+/* om de navigatie tekst automatisch het goeie font te geven  */ 
+nav ul li a {
+	font-family: var(--font-family);
+	color: var(--color-gold);
+
+}
+
+/* Om de navigatie een lijntje te geven als er gehoverd wordt */
+header nav a:visited{
+	text-decoration: none;
+}
+
+header nav a:focus{
+	text-decoration: underline;
+	text-decoration-thickness: 0.25em;
+	text-underline-offset: 0.2em;
+}
+	
+header nav a:hover{
+	text-decoration: underline;
+	text-decoration-thickness: 0.25em;
+	text-underline-offset: 0.2em;
+}
+
+header nav a:active{
+	text-decoration: underline;
+	text-decoration-thickness: 0.25em;
+	text-underline-offset: 0.2em;
+}
+
+
+/********/
+/* MAIN */
+/********/
+
+/**************/
+/* 1e section */
+/**************/
+
+/* Om de listen breed te krijgen */
+main section:nth-of-type(1) > a {
+	display:block;
+	text-align:center;
+
+/* Om de listen de juiste kleuren en vorm te geven */
+	border: 20em;
+	border-radius: 1.5em;
+	background-color: var(--color-gold); 
+	margin: 1em;
+	padding: 0.5em;
+	color:var(--color-tan);
+
+}
+
+/* om de h2/h3/h4 in het midden te krijgen en de h2 breed te krijgen */
+main section:nth-of-type(1) > h2 {
+	display: block;
+	text-align: center;
+
+}
+
+main section:nth-of-type(1) > h3{
+	text-align: center;
+}
+
+main section:nth-of-type(1) > h4 {
+	text-align: center;
+}
+/* om de h2/h3/h4 in het midden te krijgen en de h2 breed te krijgen */
+
+
+/* om de ul onder de foto netjes naast elkaar te krijgen */
+main section:nth-of-type(1) > ul {
+	display: flex;
+	gap: 1em;
+}
+
+
+/* om de volgorde van de elementen goed te krijgen  */
+main section {
+	display:flex;
+	flex-direction: column;
+}
+	h2 {
+		order:1;	
+	}	
+		
+	a {
+		order:2;
+	}
+
+	h3{
+		order: 3;
+	}
+
+	img {
+		order:4; 
+	}
+
+	h4{
+		order:5;
+	}
+
+	ul{
+		order:6; 
+	}
+/* om de volgorde van de elementen goed te krijgen  */
+
+
+
+/**********/
+/* footer */
+/**********/
+footer {
+	padding:1em;
+}
+
+
+
+/* om de footer netjes te krijgen zonder extra lijntjes etc */
+footer ul {
+	margin:0;
+	padding:0;
+	list-style: none;
+
+	/* flexboxen om de ul en li op 1 mooi rijtje te krijgen wat niet de hele pagina in beslag neemt*/
+	display: flex;
+	gap: 1em;
+}
+/* om de footer netjes te krijgen zonder extra lijntjes etc */
+
+
+
+/* om de privacy en cookie policy klikbaar te maken en een stijl te geven */
+footer li a {
+	color:white;
+	text-decoration: none;
+	outline: none;
+
+	/* background-color: green; */
+}
+
+footer li a:visited{
+	color:lightpink;
+}
+
+footer li a:focus{
+	text-decoration: underline;
+	text-decoration-thickness: .25em;
+	text-underline-offset: 0.4em;
+}
+
+footer li a:hover{
+	text-decoration-line: underline;
+	text-decoration-thickness: .25em;
+	text-underline-offset: 0.4em;
+}
+
+footer li a:active{
+	text-decoration: underline;
+	text-decoration-thickness: .25em;
+	text-underline-offset: 0.4em;
+}
+/* om de privacy en cookie policy klikbaar te maken en een stijl te geven */
