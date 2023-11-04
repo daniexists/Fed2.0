@@ -1,0 +1,213 @@
+
+/**************/
+/* CSS REMEDY */ /* geen idee wat dit is dit stond er al in */
+/**************/
+*, *::after, *::before {
+  box-sizing:border-box; 
+  
+  /* border:solid 1px red; */
+}
+
+
+/********************/
+/* overall styling  */
+/********************/
+
+
+
+
+
+/**********/
+/* HEADER */
+/**********/
+
+header{
+	position: relative;
+	height:100vh;
+
+	display:flex; 
+	justify-content: center;
+	align-items: end;
+}
+
+
+/* Voor het logo (grote en vastzetten)*/
+header h1 {
+	position: fixed; 
+	top:1em; 
+	width:9.25rem;
+
+	z-index: 100;
+}
+
+header h1 img{
+	display:block;
+}
+
+
+/* poppetjes */
+header div {
+	position: absolute;
+	inset:0;
+	background-image: 
+	linear-gradient(
+		-45deg,
+		GoldenRod ,
+		papayawhip,
+		white,
+		GoldenRod ,
+		papayawhip,
+		white,
+		GoldenRod 
+	);
+	background-size: 200% 200%;
+	background-position: left bottom;
+
+	-webkit-mask-image:url(../images/boys-mobile.svg);
+	-webkit-mask-size: auto 80%;
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-position: center;
+
+	
+}
+
+@media (prefers-reduced-motion:no-preference) {
+	header div {
+		animation-name:mask;
+		animation-duration: 5s;
+		animation-timing-function: linear;
+		animation-iteration-count: infinite;
+	}
+
+	@keyframes mask {
+		0% {
+			background-position: left top;
+		}
+		100% {
+			background-position: right bottom;
+		}
+	}
+} 
+/* poppetjes */
+
+
+
+/**********/
+/* HEADER */
+/**********/
+
+
+/********/
+/* MAIN */
+/********/
+
+/**************/
+/* 1e section */
+/**************/
+
+/* Om de listen breed te krijgen */
+main section:nth-of-type(1) > a {
+	display:block;
+	text-align:center;
+
+/* Om de listen de juiste kleuren en vorm te geven */
+	border: 20em;
+	border-radius: 1.5em;
+	background-color: var(--color-gold); 
+	margin: 1em;
+	padding: 0.5em;
+	color:var(--color-tan);
+
+}
+
+/* om de h2/h3/h4 in het midden te krijgen en de h2 breed te krijgen */
+main section:nth-of-type(1) > h2 {
+	display: block;
+	text-align: center;
+
+	 /* Om de h2 kleiner te krijgen */
+	 font-size: 1em;
+
+	 /* om de h2 verder van de nav te krijgen */
+	 padding-top: 1em;
+
+}
+
+main section:nth-of-type(1) > h3{
+	text-align: center;
+
+	 /* om de h3 verder van de listen te krijgen */
+	 padding-top: 1.5em;
+
+}
+
+main section:nth-of-type(1) > h4 {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+
+	/* om de groote van de h4 goed te krijgen */
+	font-size: 1.2em;
+}
+/* om de h2/h3/h4 in het midden te krijgen en de h2 breed te krijgen */
+
+
+/* om de foto de goeie grote te geven op de goeie plek te zetten en een border te geven */
+main section:nth-of-type(1) > img {
+	width: 22em;
+	border: 0.4em solid; 
+	border-color: --color-gold;
+	border-radius: 2em;
+
+	align-self: center;
+}
+
+
+
+/* om de ul onder de foto netjes naast elkaar te krijgen */
+main section:nth-of-type(1) > ul {
+	display: flex;
+	gap: 1em;
+	justify-content: center;
+}
+/* om de img in de ul kleiner te krijgen */
+main section:nth-of-type(1) ul img{
+	width: 2em;
+}
+
+
+/* om de volgorde van de elementen goed te krijgen  */
+main section {
+	display:flex;
+	flex-direction: column;
+}
+	main section h2 {
+		order:1;	
+	}	
+		
+	a {
+		order:2;
+	}
+
+	h3{
+		order: 3;
+	}
+
+	img {
+		order:4; 
+	}
+
+	h4{
+		order:5;
+	}
+
+	ul{
+		order:6; 
+	}
+/* om de volgorde van de elementen goed te krijgen  */
+
+/********/
+/* MAIN */
+/********/
+
+

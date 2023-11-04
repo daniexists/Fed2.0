@@ -1,127 +1,25 @@
-/* De lettertypes die ik nodig heb toe te voegen */
-@font-face {
-	font-family: '5secondsofsummerbold';
-	src: url(../fonts/urw-antiqua-bold.woff2);
-}
-
-@font-face {
-	font-family: '5secondsofsummermedium';
-	src: url(../fonts/urw-antiqua-medium.woff2);
-}
-/* De lettertypes die ik nodig heb toe te voegen */
-
-
-
-
-/**************/
-/* CSS REMEDY */ /* geen idee wat dit is dit stond er al in */
-/**************/
-*, *::after, *::before {
-  box-sizing:border-box; 
-  
-  /* border:solid 1px red; */
-}
-
-
-
-
-
-/*********************/
-/* CUSTOM PROPERTIES */ /* Om het mezelf makkelijker te maken properties voor de kleuren en letterypes gemaakt */
-/*********************/
-:root {
-	--color-gold:rgb(240, 234, 187);
-	--color-blue:rgb(2, 7, 36);
-	--color-tan:rgb(103,101,77);
-	  font-family: '5secondsofsummermedium';
-}
-
-
-
-
-
-/********************/
-/* overall styling  */
-/********************/
-html{
-	background-image:url(../images/v3-bg.jpg); 
-	background-repeat: repeat-y;
-	background-size:100% auto;
-
-	/* om alle tekst de goeie kleur te geven */ 
-	color: var(--color-gold);
-}
-
-
-body {
-	margin:0;
-	
-}
-
-
-/* om de achtergrond over de hele pagina te krijgen */
-h1{
-	margin: 0;
-}
-
-/* de fotos worden niet groter dan de container*/
-img {
-	max-width: 100%;
-}
-
-/* Om de puntjes voor de list items in de navigatie en de footer weg te halen */ 
-main ul {
-	margin:0;
-	padding:0;
-	list-style: none;
-
-	/* flexboxen om de ul en li op 1 mooi rijtje te krijgen wat niet de hele pagina in beslag neemt*/
-	display: flex;
-	overflow-x: auto;
-	gap: 1em;
-}
-
-/* Om het lijntje onder de links we te krijgen */
-a {
-	text-decoration: none;
-}
-/********************/
-/* overall styling  */
-/********************/
-
-
 /**********/
 /* HEADER */
 /**********/
-
 header{
 	position: relative;
-	height:100vh;
-
 	display:flex; 
-	justify-content: center;
-	align-items: end;
+	align-items: center;
+	flex-direction: column;
+	padding-top:8em;
+	padding-bottom:3em
 }
 
-/* header ul en li op 1 rijtje krijgen en zonder lijntjes en punten*/
-header ul {
-	margin:0;
-	padding:0;
-	list-style: none;
-
-	/* flexboxen om de ul en li op 1 mooi rijtje te krijgen wat niet de hele pagina in beslag neemt*/
-	display: flex;
-	gap: 1em;
-}
-
-/* Voor het logo (grote en vastzetten)*/
-header img {
+header > a {
 	position: fixed; 
 	top:1em; 
 	width:9.25rem;
 
 	z-index: 100;
-	
+}
+
+/* Voor het logo (grote en vastzetten)*/
+header > a img{
 	display:block;
 }
 /* Voor het logo (grote en vastzetten)*/
@@ -131,38 +29,6 @@ header nav {
 	position: relative;
 	padding:2em;
 }
-
-
-/* om de navigatie tekst automatisch het goeie font te geven  */ 
-nav ul li a {
-	font-family: var(--font-family);
-	color: var(--color-gold);
-
-}
-
-/* Om de navigatie een lijntje te geven als er gehoverd wordt */
-header nav a:visited{
-	text-decoration: none;
-}
-
-header nav a:focus{
-	text-decoration: underline;
-	text-decoration-thickness: 0.25em;
-	text-underline-offset: 0.2em;
-}
-	
-header nav a:hover{
-	text-decoration: underline;
-	text-decoration-thickness: 0.25em;
-	text-underline-offset: 0.2em;
-}
-
-header nav a:active{
-	text-decoration: underline;
-	text-decoration-thickness: 0.25em;
-	text-underline-offset: 0.2em;
-}
-
 /**********/
 /* HEADER */
 /**********/
@@ -170,103 +36,65 @@ header nav a:active{
 
 
 
+/*********/
+/* MAIN */
+/*********/
 
 
-
-
-
-
-
-
-
-
-
-/**********/
-/* footer */
-/**********/
-
-
-
-/* om de form te stylen */
-
-
-footer hr{
-	padding: 0;
-	border-color: var(--color-gold);
-	border-top: 0.01em solid;
+h1{
+	font-size: 4.5em;
+}
+/* om de volgorde van de elementen goed te krijgen  */
+main section{
+	display: grid;
+	grid-template-columns: 12fr 1fr;
+	grid-template-rows: 0fr 1fr 1fr;
+	gap:0em;
+	padding: 0 1em;
 }
 
-footer form{
-	padding: 3.5em;
-	
+date {
+	grid-row:1;
+	grid-column:1;
 }
 
-
-
-
-/* om de footer netjes te krijgen zonder extra lijntjes etc */
-footer ul {
-	margin:0;
-	padding:0;
-	list-style: none;
-
-	/* flexboxen om de ul en li op 1 mooi rijtje te krijgen wat niet de hele pagina in beslag neemt*/
-	display: flex;
-	gap: 1em;
-	justify-content: center;
-}
-/* om de footer netjes te krijgen zonder extra lijntjes etc */
-
-/* om de iconen kleiner en op 1 rij te krijgen */
-footer ul img{
-	width:1.2em;
+h2{
+	grid-row:2;
+	grid-column:1;
 }
 
-footer ul:nth-of-type(2){
-	margin:0.5em;
+address{
+	grid-row:3;
+	grid-column:1; 
+}
+
+a{
+	grid-row:2;
+	grid-column-start: 2;
+	align-self: center;
 }
 
 
-/* om de privacy en cookie policy klikbaar te maken en een stijl te geven */
-footer li a {
-	color:white;
-	text-decoration: none;
-	outline: none;
 
+/* om de ticket links te stylen */
+main section a{
+	border: 20em;
+	border-radius: 1.5em;
+	background-color: var(--color-gold); 
+	margin: 0;
+	padding: 0.5em;
+	color:var(--color-tan);
 
-	/* background-color: green; */
+	transition:transform .2s;
 }
 
-footer li a:visited{
-	color:lightpink;
+main section a:hover{
+	transform: scale(0.8);
 }
 
-footer li a:focus{
-	text-decoration: underline;
-	text-decoration-thickness: .25em;
-	text-underline-offset: 0.4em;
-}
 
-footer li a:hover{
-	text-decoration-line: underline;
-	text-decoration-thickness: .25em;
-	text-underline-offset: 0.4em;
-}
 
-footer li a:active{
-	text-decoration: underline;
-	text-decoration-thickness: .25em;
-	text-underline-offset: 0.4em;
-}
-/* om de privacy en cookie policy klikbaar te maken en een stijl te geven */
 
-footer ul li a{
-	font-size: 0.7em;
-}
-
-footer ul li{
-	padding-top: 0.8em;
-}
-/**********/
-/* footer */
-/**********/
+/*********/
+/* MAIN */
+/*********/
