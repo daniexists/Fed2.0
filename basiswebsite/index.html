@@ -8,7 +8,9 @@
 	
 	<title>5 Seconds of Summer | Official website</title>
 	
-	<link href="styles/style.css" rel="stylesheet">
+	<link href="styles/algemeen.css" rel="stylesheet">
+	<link href="styles/index.css" rel="stylesheet">
+
 	<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
 </head>
 
@@ -44,6 +46,7 @@
 			<h4>
 				Available Now
 			</h4>
+			
 			<ul>
 				<li>
 					<a href="">
@@ -65,14 +68,25 @@
 	</main>
 
 	<footer>
-		<h2>Sign up to receive updates</h2>
+		
 
-		<hr> 
+		
 		<form>
-			<label for="fname"></label><br>
-			<input type="text" id="fname" name="fname" value="Email"><br>
+
+			<h2>Sign up to receive updates</h2>
+
+			<label class="visually-hidden" for="fname">iemand</label>
+			
+			<input type="text" id="fname" name="fname" placeholder="Email" disabled>
+
+			<button disabled aria-label="Subscribe to the newsletter"></button >
+
+			<label>
+				<input type="checkbox">
+				Yes, I would like to receive marketing and sales communications from 5 Seconds of Summer Privacy Policy.
+			</label>
 		</form>
-		<hr>
+		
 
 		<ul>
 			<li>

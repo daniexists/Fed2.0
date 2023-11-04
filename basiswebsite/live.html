@@ -6,6 +6,7 @@
 
     <title>5 Seconds of Summer | Official website | Live </title>
 
+	<link href="styles/algemeen.css" rel="stylesheet">
 	<link href="styles/style2.css" rel="stylesheet">
 </head>
 <body>
@@ -120,7 +121,7 @@
 		<section>
 			<date>WED,OCT 11</date>
 			<h2>The 5 Seconds of Summer Show</h2>
-			<address>GlIWICE,Poland</address>
+			<address>Gliwice,Poland</address>
 			<a href="https://pranx.com/bouncing-dvd-screensaver/" > Tickets  </a>
 		</section>
 
@@ -147,15 +148,26 @@
     </main>
 
 
-    <footer>
-		<h2> Sign up to receive updates </h2>
+	<footer>
 		
-		<hr> 
+
+		
 		<form>
-			<label for="fname"></label><br>
-			<input type="text" id="fname" name="fname" value="Email"><br>
+
+			<h2>Sign up to receive updates</h2>
+
+			<label class="visually-hidden" for="fname">iemand</label>
+			
+			<input type="text" id="fname" name="fname" placeholder="Email" disabled>
+
+			<button disabled aria-label="Subscribe to the newsletter"></button >
+
+			<label>
+				<input type="checkbox">
+				Yes, I would like to receive marketing and sales communications from 5 Seconds of Summer Privacy Policy.
+			</label>
 		</form>
-		<hr>
+		
 
 		<ul>
 			<li>
@@ -190,5 +202,6 @@
 			</li>
 		</ul>
 	</footer>
+	<script defer src="scripts/script.js"></script>
 </body>
 </html>
