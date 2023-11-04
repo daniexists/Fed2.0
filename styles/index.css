@@ -156,7 +156,7 @@ main section:nth-of-type(1) > h4 {
 main section:nth-of-type(1) > img {
 	width: 22em;
 	border: 0.4em solid; 
-	border-color: --color-gold;
+	border-color: var(--color-gold);
 	border-radius: 2em;
 
 	align-self: center;
